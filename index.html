@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHAI BOT</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS File -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background-color: #2d1f71; /* Dark purple background */
+            color: white;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #3a2e88; /* Slightly lighter purple */
+            color: white;
+            border: 1px solid #6a4f9b;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #5f3f94; /* Purple color for button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #4a2f74; /* Slightly darker purple on hover */
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #6a4f9b;
+            background-color: #3a2e88;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffb8ff;
+        }
+
+        #user-input {
+            border: 1px solid #6a4f9b;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>GHAI BOT</h1>
@@ -24,7 +75,7 @@
             }
 
             try {
-                const response = await fetch("https://ghaibot.onrender.com/chat", {
+                const response = await fetch("https://ghaibot.onrender.com/chat", {  // Updated URL
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ message: userInput })
